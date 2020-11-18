@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>To do List</title>
+  </head>
+  <body>
+    <div id="root">
+
+      <input v-model="message">
+      <button type="button" @click="toDo">Cliccami</button>
+      <div class="lista">
+        <ul>
+          <li v-for="element in list">{{element}} <i class='fas fa-american-sign-language-interpreting' ></i></li>
+
+        </ul>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
