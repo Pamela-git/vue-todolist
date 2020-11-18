@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>To do List</title>
@@ -17,21 +17,20 @@
       <div class="container">
 
         <div class="">
-          <input v-model="message" placeholder="thing to do">
+          <input v-model="message" placeholder="thing to do" v-on:keyup.enter="toDo">
           <button type="button" @click="toDo" class="stylebt"> Add </button>
         </div>
+      </div>
       <div class="container">
         <div class="item-flex">
           <ul>
-            <li v-for="(element, index) in list"> {{list[index]}}
+            <li v-for="(element, index) in list" class="container-flex"> <span>{{list[index]}}</span>
               <i :class="icon" @click="hide(index)"></i>
             </li>
 
           </ul>
 
         </div>
-
-      </div>
 
       </div>
 
