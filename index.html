@@ -3,29 +3,39 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>To do List</title>
   </head>
   <body>
     <div id="root">
+      <header class="top">
+        <img src="img/todo.jpg" alt="">
+      </header>
+      <div class="container">
 
-      <input v-model="message">
-      <button type="button" @click="toDo">Cliccami</button>
-      <div class="lista">
-        <ul>
-          <li v-if="show" v-for="element in list"> {{element}}   <i class="fas fa-angle-right" @click="hide"></i> </li>
+        <div class="">
+          <input v-model="message" placeholder="thing to do">
+          <button type="button" @click="toDo" class="stylebt"> Add </button>
+        </div>
+      <div class="container">
+        <div class="item-flex">
+          <ul>
+            <li v-for="(element, index) in list"> {{list[index]}}
+              <i :class="icon" @click="hide(index)"></i>
+            </li>
 
-        </ul>
+          </ul>
+
+        </div>
 
       </div>
+
+      </div>
+
     </div>
-
-
-
-
-
-
-
 
 
     <script src="js/script.js"></script>

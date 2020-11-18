@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+  font-family: 'Dancing Script', cursive;
+}
+
+header {
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  background-color: rgb(245, 247, 247);
+}
+
+.item-flex {
+  width: 50%;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.stylebt {
+  width: 100px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background-color: rgb(40, 57, 102);
+  transition: transform 0.1s;
+}
+
+.stylebt:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+i {
+  margin-left: 60%;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+li {
+  border-bottom: 1px solid rgb(40, 57, 102);
+  padding: 10px 0;
+}

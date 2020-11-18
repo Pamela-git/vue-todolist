@@ -8,7 +8,7 @@
 var app = new Vue ({
   el: "#root",
   data: {
-    show: true,
+    icon: "fas fa-check",
     message: "",
     list: [
     ]
@@ -18,8 +18,8 @@ var app = new Vue ({
     this.list.push(this.message);
     console.log(this.list);
     } ,
-    hide: function () {
-      this.show = false
+    hide: function(i) {
+      this.list.splice(i,1);
     }
   }
 
