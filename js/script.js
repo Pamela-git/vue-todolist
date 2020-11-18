@@ -11,7 +11,7 @@ var app = new Vue ({
     icon: "fas fa-check",
     message: "",
     list: [
-      "Sfamare il criceto",
+      "Sfamare il Porcellino d'India",
     ]
   },
   methods: {
