@@ -5,35 +5,22 @@
 // una volta che l’utente ha ipoteticamente svolto l’attività, grazie ad un bottone (X) può eliminare quella determinata cosa dalla lista.
 
 
-
-
 var app = new Vue ({
   el: "#root",
   data: {
+    show: true,
     message: "",
     list: [
-
-
     ]
-
-
-
-
-
-
-
   },
   methods: {
     toDo: function () {
-     this.list.push(this.message);
-     console.log(this.list);
-   }
-
+    this.list.push(this.message);
+    console.log(this.list);
+    } ,
+    hide: function () {
+      this.show = false
+    }
   }
-
-
-
-
-
 
 })

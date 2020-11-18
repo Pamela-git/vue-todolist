@@ -13,7 +13,7 @@
       <button type="button" @click="toDo">Cliccami</button>
       <div class="lista">
         <ul>
-          <li v-for="element in list">{{element}} <i class='fas fa-american-sign-language-interpreting' ></i></li>
+          <li v-if="show" v-for="element in list"> {{element}}   <i class="fas fa-angle-right" @click="hide"></i> </li>
 
         </ul>
 
