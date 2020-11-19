@@ -62,6 +62,7 @@ i:hover {
   color: red;
 }
 
-.stylep {
+.styleli {
   list-style: none;
+  text-align: center;
 }

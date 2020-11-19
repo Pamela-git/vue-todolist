@@ -26,7 +26,7 @@ var app = new Vue ({
       } else {
         this.list.push(this.message);
         this.message = '';
-        // condizione per scomparsa <p>: "no cose da fare"
+        // condizione per scomparsa <li>: "no cose da fare"
         if (this.list.lenght !== 0) {
           this.free = false;
         }
@@ -37,7 +37,7 @@ var app = new Vue ({
     hide: function(i) {
       // this.list.splice(i,1);
       this.$delete(this.list, i);
-      // condizione per apparizione <p>: "no cose da fare"
+      // condizione per apparizione <li>: "no cose da fare"
       if (this.list.length === 0) {
         this.free = true;
       }
