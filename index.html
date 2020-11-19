@@ -24,10 +24,10 @@
       <div class="container">
         <div class="item-flex">
           <ul>
+            <li v-if="free" class="stylep"> Oggi non hai niente da fare &#128526; </li>
             <li v-for="(element, index) in list" class="container-flex"> <span>{{list[index]}}</span>
               <i :class="icon" @click="hide(index)"></i>
             </li>
-
           </ul>
 
         </div>

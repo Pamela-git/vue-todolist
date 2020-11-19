@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Dancing Script', cursive;
+  font-size: 30px;
 }
 
 header {
@@ -38,6 +39,7 @@ input {
   width: 400px;
   height: 30px;
   border-radius: 30px;
+  padding: 10px;
 }
 
 .stylebt {
@@ -57,8 +59,9 @@ input {
 
 i:hover {
   cursor: pointer;
+  color: red;
 }
 
-li {
-
+.stylep {
+  list-style: none;
 }

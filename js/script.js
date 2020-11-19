@@ -8,10 +8,12 @@
 var app = new Vue ({
   el: "#root",
   data: {
-    icon: "fas fa-check",
+    icon: "fas fa-eraser",
     message: "",
+    free: true,
     list: [
-      "Sfamare il Porcellino d'India",
+
+      
     ]
   },
   methods: {
@@ -21,12 +23,18 @@ var app = new Vue ({
       } else if (this.list.includes(this.message)){
         alert("guarda bene, l'hai già inserito!")
       } else {
+        this.free = false;
         this.list.push(this.message);
+        this.message = '';
         console.log(this.list);
       }
     } ,
     hide: function(i) {
-      this.list.splice(i,1);
+      // this.list.splice(i,1);
+      this.$delete(this.list, i);
+      if (this.list.length === 0) {
+        this.free = true;
+      }
     },
   }
 
