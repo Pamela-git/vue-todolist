@@ -15,12 +15,13 @@
         <img src="img/todo.jpg" alt="">
       </header>
       <div class="container">
-
-        <div class="">
+        <!-- blocco input -->
+        <div>
           <input v-model="message" placeholder="thing to do" v-on:keyup.enter="toDo">
           <button type="button" @click="toDo" class="stylebt"> Add </button>
         </div>
       </div>
+      <!-- blocco lista -->
       <div class="container">
         <div class="item-flex">
           <ul>
@@ -29,14 +30,12 @@
               <i :class="icon" @click="hide(index)"></i>
             </li>
           </ul>
-
         </div>
-
       </div>
-
+      <!-- fine blocco Vue -->
     </div>
 
-
+    <!-- javascript -->
     <script src="js/script.js"></script>
   </body>
 </html>

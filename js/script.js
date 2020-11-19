@@ -13,25 +13,31 @@ var app = new Vue ({
     free: true,
     list: [
 
-      
+
     ]
   },
   methods: {
+    // aggiunta messagio input all'array
     toDo: function () {
       if (this.message==="") {
         alert("Scrivi qualcosa da fare")
       } else if (this.list.includes(this.message)){
         alert("guarda bene, l'hai già inserito!")
       } else {
-        this.free = false;
         this.list.push(this.message);
         this.message = '';
+        // condizione per scomparsa <p>: "no cose da fare"
+        if (this.list.lenght !== 0) {
+          this.free = false;
+        }
         console.log(this.list);
       }
     } ,
+    // eliminazione elementi dall'array
     hide: function(i) {
       // this.list.splice(i,1);
       this.$delete(this.list, i);
+      // condizione per apparizione <p>: "no cose da fare"
       if (this.list.length === 0) {
         this.free = true;
       }
