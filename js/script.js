@@ -11,10 +11,7 @@ var app = new Vue ({
     icon: "fas fa-eraser",
     message: "",
     free: true,
-    list: [
-
-
-    ]
+    list: []
   },
   methods: {
     // aggiunta messagio input all'array
@@ -26,17 +23,15 @@ var app = new Vue ({
       } else {
         this.list.push(this.message);
         this.message = '';
-        // condizione per scomparsa <li>: "no cose da fare"
-        if (this.list.lenght !== 0) {
-          this.free = false;
-        }
+        this.free = false;
         console.log(this.list);
       }
     } ,
     // eliminazione elementi dall'array
     hide: function(i) {
-      // this.list.splice(i,1);
-      this.$delete(this.list, i);
+      //elimina un solo elemento partendo da i (che verrà sostituito con l'index corrispondente al richiamo della funzione nell'html)
+      this.list.splice(i,1);
+      // this.$delete(this.list, i);
       // condizione per apparizione <li>: "no cose da fare"
       if (this.list.length === 0) {
         this.free = true;
